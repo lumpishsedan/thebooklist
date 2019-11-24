@@ -1,0 +1,18 @@
+we know in template we can display complete database list / rows
+
+but how can we do partial list view like a select query
+
+note that the youtube has a video tutorial 
+
+https://youtu.be/nle3u6Ww6Xk
+
+This is a great video on how you can use forms to provide values to different
+fields of the database using which we can filter the database and render the 
+output.
+
+HOWEVER, there are some basic concepts which can be used so that 
+we don't even need to use this video tutorial 
+
+we will start this step by step
+in part 1 query list view
+we will simply user filter inside views.py and render selective template

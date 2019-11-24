@@ -1,0 +1,60 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+# pages/urls.py
+from django.urls import path
+from .views import HomePageView, SelectView, PostView, PostDetailView
+urlpatterns = [
+   path('', HomePageView, name='home'),
+   path('select/', SelectView.as_view(), name='select'),
+   path('post/new/', PostView.as_view(), name='post_new'), # new
+   path('post/<int:pk>/', PostDetailView.as_view(), name='post_detail'),
+
+]
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+<!-- templates/select.html -->
+<header>
+   <a href="{% url 'home' %}">Home</a>
+</header>
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+<!-- templates/post_new.html -->
+<h1>New post</h1>
+<form action="" method="post">{% csrf_token %}
+{{ form.as_p }}
+    <input type="submit" value="Save" />
+</form>
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+<!-- templates/post_detail.html -->
+<div class="post-entry">
+    <h2>{{ post.keyone }}</h2>
+    <p>{{ post.text }}</p>
+</div>
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+project_urls.py
+from django.contrib import admin
+from django.urls import path, include
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('appone.urls')),
+]
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+INSTALLED_APPS = [
+    'appone.apps.ApponeConfig', # new
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
