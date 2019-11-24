@@ -1,0 +1,16 @@
+Static and Templates
+-----------------------
+the concept behind both of these
+is to seperate the development work done for
+backend and frontend. while the rest of the
+files in django project are only worked upon
+by backend developer. The files inside the
+static and template folders are first designed
+and developed by the frontend developer. 
+frontend developer delivers these files to
+backend developer and the backend developer
+adds some django code inside some of these 
+files to incorporate them in django project.
+
+The templates includes only html files
+the static files includes css, js and images

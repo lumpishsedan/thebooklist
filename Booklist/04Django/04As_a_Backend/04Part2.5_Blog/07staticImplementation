@@ -1,0 +1,102 @@
+Static files
+Exactly like templates
+we create a folder called static
+inside this we would keep css,images
+and js in seperate folders
+
+-----------------------------------------
+step1
+
+(blog) $ mkdir static
+(blog) $ mkdir static/css
+(blog) $ touch static/css/base.css
+-----------------------------------------
+step 2 
+
+# blog_project/settings.py
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+-----------------------------------------
+step 3 
+/* static/css/base.css */
+body {
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 18px;
+}
+header {
+border-bottom: 1px solid #999;
+margin-bottom: 2rem;
+display: flex;
+}
+header h1 a {
+color: red;
+text-decoration: none;
+}
+.nav-left {
+margin-right: auto;
+}
+.nav-right {
+display: flex;
+padding-top: 2rem;
+}
+.post-entry {
+margin-bottom: 2rem;
+}
+.post-entry h2 {
+margin: 0.5rem 0;
+}
+.post-entry h2 a,
+.post-entry h2 a:visited {
+color: blue;
+text-decoration: none;
+}
+.post-entry p {
+margin: 0;
+font-weight: 400;
+}
+.post-entry h2 a:hover {
+color: red;
+}
+
+
+
+-----------------------------------------
+step 4 - adding static to templates 
+
+<!-- templates/base.html -->
+{% load static %}
+<html>
+    <head>
+        <title>Django blog</title>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400"
+        rel="stylesheet">
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    </head>
+
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}">Django blog</a></h1>
+    </header>
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+
+</html>
+
+-----------------------------------------
+step 5 - that was all for static now lets just repeat another template page process
+
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% block content %}
+{% for post in object_list %}
+<div class="post-entry">
+    <h2><a href="">{{ post.title }}</a></h2>
+    <p>{{ post.body }}</p>
+</div>
+{% endfor %}
+{% endblock content %}
+
+

@@ -1,0 +1,39 @@
+`there are 3 things to learn` & @CRLF & _
+`` & @CRLF & _
+`1. how to enable admin to add custom data to database` & @CRLF & _
+`2. how to read existing data in database` & @CRLF & _
+`3. how to enable user to add custom data to database` & @CRLF & _
+
+
+`Some Notes` & @CRLF & _
+`` & @CRLF & _
+`there are just two files that need to be modified for this.` & @CRLF & _
+`` & @CRLF & _
+`1. you need to create a models.py inside the app for which you what the database.` & @CRLF & _
+`2. you need to modify the admin.py file inside this app so new table appears on admin.` & @CRLF & _
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+Global $g_sString4_1 =
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+$TreeView_root4 = GUICtrlCreateTreeViewItem("Django as Backend", $TreeView1)
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+
+$TreeView_branch4_1 = GUICtrlCreateTreeViewItem("1st Notes", $TreeView_root4)
+$TreeView_branch4_2 = GUICtrlCreateTreeViewItem("2nd Notes", $TreeView_root4)
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+
+        Case $TreeView_branch4_1
+			ShowSnippet($g_sString4_1)
+		Case $TreeView_branch4_2
+			ShowSnippet($g_sString4_2)

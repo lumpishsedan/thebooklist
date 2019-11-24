@@ -1,2 +1,0 @@
-# thebooklist
-Created with CodeSandbox

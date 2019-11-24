@@ -1,0 +1,8 @@
+next command creates the app.
+note this app is not created inside the test_project folder but side by side it.
+just run
+
+python manage.py startapp pages
+
+( note - this 7th command is the last in the series. next open the project005 folder inside atom ide
+and work from there )

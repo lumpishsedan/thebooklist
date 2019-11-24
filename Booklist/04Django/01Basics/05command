@@ -1,0 +1,5 @@
+Now enter this folder project005
+and then run this command 
+( Note there is a period at the end )
+
+django-admin startproject test_project .

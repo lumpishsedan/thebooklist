@@ -1,0 +1,7 @@
+now we need to create a template file called home.html
+As before,  Create a project-level directory called
+templates and a home.html template file.
+Command Line
+(mb) $ mkdir templates
+(mb) $ type nul > templates/home.html
+IMPORTANT - and if you havent already add the templates to settings.py

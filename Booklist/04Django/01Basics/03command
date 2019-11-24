@@ -1,0 +1,8 @@
+Once  a new virtual env is created and you have entered it. it still doesnt have django so...
+
+make sure you are entered in virtual env ( otherwise django will be intalled globally in your system )
+
+pip install django
+
+( you dont need to be inside project folder at this time because django is not getting installed in project
+folder but the virtual env.)

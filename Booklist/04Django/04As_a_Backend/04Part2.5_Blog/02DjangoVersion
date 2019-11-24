@@ -1,0 +1,8 @@
+Recommended Django version
+uptil now we were working on Django version 2.1
+there may be some problems when advanced database
+is created in django 2.1
+so the from now onwards we will be using django 2.1.5
+thus we will create a new virtual environment
+mkvirtualenv blog215-xx1
+pip install django==2.1.5

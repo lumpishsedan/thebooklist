@@ -1,0 +1,7 @@
+Now note that manage.py is created outside the test_project folder. next step is to run the server 
+
+python manage.py runserver
+
+when the server is running and localhost:8000 , 
+1. open your browser and check it
+2. keep the command prompt window running and undisturbed & open a new cmd window for further work.

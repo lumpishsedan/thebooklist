@@ -1,0 +1,5 @@
+once you are in the virtualenv and you have installed django. now go to djangoprojects directory in j drive
+
+create a new folder with any name ( inside this you will create your django project )
+
+mkdir project005

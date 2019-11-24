@@ -1,0 +1,12 @@
+let StoredBooks = [{
+        title: "bookOneTitle",
+        author: "bookOneAuthor",
+        isbn: "bookOneISBN"
+    },
+      
+    {
+        title: "bookTwoTitle",
+        author: "bookTwoAuthor",
+        isbn: "bookTwoISBN"
+    },
+];

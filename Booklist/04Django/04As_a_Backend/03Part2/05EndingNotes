@@ -1,0 +1,11 @@
+Ending notes - there is no new coding
+to be done and so the reading data part
+project is complete, however since you
+created a new app called posts. create
+the posts_urls.py as learnt in djangobasics
+point 17th and also make sure that 
+project_urls.py is same as djangobasics 
+11th point. 
+Just restart the server and at the 
+homepage you should see the
+ list from the database.

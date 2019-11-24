@@ -1,0 +1,8 @@
+now the part 3 is about enabling user to add custom
+data to the database. Before we do that lets cover
+some more basic parts like having more realistic tables
+in database, using static files and css, few concepts
+involved when a more realistic views on the website
+is created.
+To cover all these we will create a new project
+where we implement a blog.

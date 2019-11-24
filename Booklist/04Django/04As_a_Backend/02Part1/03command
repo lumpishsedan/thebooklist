@@ -1,0 +1,2 @@
+(mb) $ python manage.py makemigrations posts
+(mb) $ python manage.py migrate posts

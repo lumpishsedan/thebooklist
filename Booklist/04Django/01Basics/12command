@@ -1,0 +1,7 @@
+At this point we have a working django website with views.
+Next we introduce the use of templates
+For reasons explained in "Django for Beginners" page 43 ,
+we will create templates directory alongside test_project
+and app.
+
+mkdir templates

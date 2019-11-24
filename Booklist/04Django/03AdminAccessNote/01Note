@@ -1,0 +1,9 @@
+There are only 3-4 steps in order to login to the Django
+admin panel. But its very important to remember them
+in sequence
+
+1. django-admin startproject projectname .
+2. python manage.py migrate
+( i got stuck once for a long time because i forgot step 2)
+3. python manage.py createsuperuser
+4 and at last python manage.py runserver
