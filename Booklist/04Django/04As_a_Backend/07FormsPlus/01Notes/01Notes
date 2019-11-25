@@ -1,0 +1,10 @@
+The objective is to introduce the concept of forms with its complex parts.
+
+earlier we were succussful in creating a form simply by using the
+code {{ form.as_p }} inside the template file.
+
+and we were able to route after form submission using get_absolute_url
+
+that is all good but now we will get our hands dirty with modelforms.
+
+

@@ -1,0 +1,15 @@
+<!-- templates/about.html -->
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h1 class="display-4 text-center">
+      <i class="fas fa-book-open text-primary"></i> My<span class="text-primary">Book</span>List</h1>
+<form id="book-form" action="" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form.as_p }}
+    <input type="submit" value="Add Book" class="btn btn-primary btn-block mt-4">
+    </div>
+  </form>
+</div>
+{% endblock content %}
